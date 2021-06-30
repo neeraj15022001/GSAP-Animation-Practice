@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.hamburger {
+  background-color: silver;
+}
+.hamburger:hover .line-one,
+.hamburger:hover .line-two,
+.hamburger:hover .line-three {
+  transform-origin: 50% 50%;
+  animation: line-grow ease-out 500ms;
+}
+.hamburger:hover .line-two {
+  animation-delay: 75ms;
+}
+.hamburger:hover .line-three {
+  animation-delay: 150ms;
+}
+@keyframes line-grow {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
